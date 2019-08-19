@@ -1,7 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App component renders App 1`] = `
-<h1>
-  Hello World
-</h1>
+<Fragment>
+  <h1>
+    Hello World, enter 1. your name, and 2. a greeting in the fields below!
+  </h1>
+  <NameTag />
+</Fragment>
 `;
