@@ -10,8 +10,6 @@ export default class NameTag extends Component {
       <>
         <p>name:</p>
         <TextSelector />
-        <p>greeting:</p>
-        <TextSelector />
         <ColorSelector />
         <Shape />
       </>

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shape component renders Shape 1`] = `
+<p>
+  this will change the shape (this will not change the shape, but it is the shape component)
+</p>
+`;
