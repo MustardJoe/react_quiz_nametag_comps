@@ -1,29 +1,35 @@
 import React from 'react';
-import styles from './ColorSelector.css';
+import PropTypes from 'prop-types';
 
-function ColorSelector() {
-
-  const redHandler = () => {
-    /* eslint-disable no-console */
-    console.log('please pretend the background is red');
-  };
-
-  const yellowHandler = () => {
-    console.log('please pretend the background is yellow');
-  };
-
-  const blueHandler = () => {
-    console.log('please pretend the background is blue');
-  };
-
+function ColorSelector({ 
+  color, 
+  handleColorChange,
+  backgroundColor,
+  handleBackgroundColorChange }) {
   return (
-    <section className={styles.ColorPicker}>
-      <button className={styles.red} onClick={redHandler}>Red</button>
-      <button className={styles.yellow} onClick={yellowHandler}>Yellow</button>
-      <button className={styles.blue} onClick={blueHandler}>Blue</button>
-    </section>
+    <form>
+      <input
+        type="color"
+        name="color"
+        value={color}
+        onChange={(event) => handleColorChange(event)}>
+      </input>
+      <input
+        type="color"
+        name="backgroundColor"
+        value={backgroundColor}
+        onChange={(event) => handleBackgroundColorChange(event)}>
+      </input>
+    </form>
   );
 }
+
+ColorSelector.propTypes = {
+  color: PropTypes.string.isRequired,
+  backgroundColor: PropTypes.string.isRequired,
+  handleColorChange: PropTypes.func.isRequired,
+  handleBackgroundColorChange: PropTypes.func.isRequired
+};
 
 export default ColorSelector;
 
